@@ -5,6 +5,4 @@
  * @license   <https://github.com/Genial-Framework/Dependency-Injection/blob/master/LICENSE> New BSD License
  */
 
-
-
 define('GENIAL_DEPENDENCY_INJECTION_VERSION', '1.0.0');
