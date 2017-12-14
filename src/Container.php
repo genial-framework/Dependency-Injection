@@ -8,8 +8,8 @@
 namespace Genial\Dependency_Injection;
 
 /**
- * Container
+ * Container.
  */
 class Container
-{ 
+{
 }
