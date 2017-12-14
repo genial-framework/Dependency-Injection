@@ -7,9 +7,31 @@
 
 namespace Genial\Dependency_Injection;
 
+use SplObjectStorage;
+use ArrayAccess;
+
 /**
  * Container.
  */
-class Container
+class Container implements ArrayAccess
 {
+   
+    /**
+     * @var object|\SplObjectStorage $dependents
+     */
+    private $dependents;
+    
+    /**
+     * __construct()
+     *
+     * Initialize a new container
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->dependents = new \SplObjectStorage();
+      
+    }
+  
 }
