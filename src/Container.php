@@ -15,9 +15,14 @@ use ArrayAccess;
 class Container implements ArrayAccess
 {
     /**
-     * @var object|\SplObjectStorage
+     * @var object|\SplObjectStorage $dependents
      */
     private $dependents;
+    
+    /**
+     * @var array|[] $keys
+     */
+    private $keys = [];
 
     /**
      * __construct().
@@ -29,5 +34,19 @@ class Container implements ArrayAccess
     public function __construct()
     {
         $this->dependents = new \SplObjectStorage();
+    }
+    
+    /**
+     * offsetExists().
+     *
+     * Check to see if a parameter or an object is set
+     *
+     * @param string $id The unique identifier for the parameter or object
+     *
+     * @return void
+     */
+    public function offsetExists($id)
+    {
+        return isset($this->keys[$id]);
     }
 }
