@@ -15,12 +15,12 @@ use ArrayAccess;
 class Container implements ArrayAccess
 {
     /**
-     * @var object|\SplObjectStorage $dependents
+     * @var object|\SplObjectStorage
      */
     private $dependents;
-    
+
     /**
-     * @var array|[] $keys
+     * @var array|[]
      */
     private $keys = [];
 
@@ -35,7 +35,7 @@ class Container implements ArrayAccess
     {
         $this->dependents = new \SplObjectStorage();
     }
-    
+
     /**
      * offsetExists().
      *
