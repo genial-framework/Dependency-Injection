@@ -11,3 +11,4 @@ composer.phar
 /vendor/
 /tests/
 /docs/
+ar.predefined.php
